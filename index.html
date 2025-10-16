@@ -10,19 +10,18 @@
     <h1>Nombre de mots</h1>
     <div class="goal-section">
       <label for="goal">Objectif :</label>
-      <input type="number" id="goal" />
-      <button onclick="setGoal()">Définir l’objectif</button>
+      <input type="number" id="goal" aria-label="Entrer le nombre de mots à atteindre" />
+      <button onclick="setGoal()" aria-label="Définir l’objectif de mots">Définir l’objectif</button>
     </div>
     <div class="counter">
-      <p id="wordCount">0 mots</p>
-      <button onclick="addWords(100)">+100 mots</button>
-      <button onclick="resetCount()">Réinitialiser</button>
+      <p id="wordCount" aria-live="polite" aria-label="Nombre actuel de mots">0 mots</p>
+      <button onclick="addWords(100)" aria-label="Ajouter 100 mots au compteur">+100 mots</button>
+      <button onclick="resetCount()" aria-label="Réinitialiser le compteur de mots">Réinitialiser</button>
     </div>
-    <div class="progress-bar">
+    <div class="progress-bar" role="progressbar" aria-label="Progression vers l’objectif" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
       <div id="progressFill"></div>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
-
